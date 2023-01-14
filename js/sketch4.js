@@ -31,6 +31,7 @@ function draw(){
 
             fill(248, 192, 200);
             ellipse(y, x + height / 1, 20);
+            hello //
         }
         theta += 0.08;
         y = ((theta - offset) / maxAngle) * windowWidth;
