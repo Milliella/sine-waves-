@@ -1,7 +1,7 @@
 let y = 0;
 let x  = 0;
 let theta = 0;
-let inc = 0.05; //the amount of increment the offset each frame- speed
+let inc = 0.005; //the amount of increment the offset each frame- speed
 let offset =100; //the amount offset from beginning of wave
 
 function setup(){
@@ -25,10 +25,11 @@ function draw(){
             // fill(255,- (150 / height * i), 200);
             // ellipse(y, x + width / 2, 10);
 
-            fill(255,- (0 / height * i), 0);
-            ellipse(y, x + height / 2, 10);
+            //fill(0,- (123 / height * i), 0);
+            colorMode(RGB, 255, 255, 255, 100);
+            square(y, x + height / 2, 10);
 
-            fill(89,- (10 / height * i), 10);
+            fill(128,- (128 / height * i), 128);
             ellipse(y, x + width / 40, 10);
         }
         theta += 0.2;
