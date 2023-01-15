@@ -1,22 +1,19 @@
 let y = 0;
 let x  = 0;
 let theta = 0;
-let inc = 0.1; //the amount of increment the offset each frame- speed
-let offset =100; //the amount offset from beginning of wave
+let inc = 0.06; //the amount of increment the offset each frame- speed
+let offset =1; //the amount offset from beginning of wave
 
 function setup(){
     amplitude = windowWidth;
     frequency = windowHeight;
     maxAngle = (windowWidth / frequency) * TWO_PI;
     createCanvas( windowWidth, windowHeight);
-    noStroke();
-    let length = 10;
 }
 
 function draw(){
     background (7, 30, 34);
-    noStroke();
-    let length = 4; //amount of squares in trail, one single line, 3 differente lines ect...
+    let length = 5; //amount of squares in trail, one single line, 3 differente lines ect.. wavelength amount
     while (theta < maxAngle + offset) {
         amplitude = sin(theta - offset) * (windowHeight / 3); //condenses the shapes individually 
         for (i = length; i > 1; i--) { //takes away strands
@@ -31,9 +28,9 @@ function draw(){
             fill(248, 192, 200);
             square(y, x + height / 1, 20);
         }
-        theta += 0.08;
+        theta += 0.1;
         y = ((theta - offset) / maxAngle) * windowWidth;
     }
     offset += inc;
     theta = offset;
-}
+} 
