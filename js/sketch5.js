@@ -15,7 +15,7 @@ function draw(){
     background (7, 30, 34);
     let length = 5; //amount of squares in trail, one single line, 3 differente lines ect.. wavelength amount
     while (theta < maxAngle + offset) {
-        amplitude = sin(theta - offset) * (windowHeight / 3); //condenses the shapes individually 
+        amplitude = sin(theta - offset) * (windowHeight /3); //condenses the shapes individually 
         for (i = length; i > 1; i--) { //takes away strands
             x = sin(theta - (i * 0.1)) * amplitude; //space between the seperate strands / wave pattern
             
